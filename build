@@ -1,0 +1,6 @@
+#! /usr/bin/env sh
+set -xe
+rm export/html/*
+godot --export HTML5 export/html/index.html
+dirname=$(ruby -e 'puts File.basename File.dirname File.expand_path(__FILE__)')
+butler push export/html jbodah/$dirname:html
