@@ -5,3 +5,5 @@ sed -i.bak "s/godot-base-project/$PROJ/g" build
 sed -i.bak "s/godot-base-project/$PROJ/g" project.godot
 rm -rf build.bak project.godot.bak README.md setup.sh .git
 git init
+git add .
+git commit -m "initial commit"
