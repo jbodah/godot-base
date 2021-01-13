@@ -1,7 +1,8 @@
 #! /usr/bin/env sh
 set -xe
-sed -i "s/godot-base-project/$1/g" build
-sed -i "s/godot-base-project/$1/g" project.godot
+PROJ="$(basename $(cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P))"
+sed -i "s/godot-base-project/$PROJ/g" build
+sed -i "s/godot-base-project/$PROJ/g" project.godot
 rm README.md
 rm script.sh
 rm -rf .gith
